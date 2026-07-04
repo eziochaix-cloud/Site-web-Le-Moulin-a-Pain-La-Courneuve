@@ -1,0 +1,479 @@
+/* --- 🎨 PALETTE DE COULEURS ARTISANALES (Crème, Beige, Marron) --- */
+:root {
+    --bg-light: #fdfaf4;       /* Fond général crème très doux */
+    --bg-card: #ffffff;        /* Fond des cartes (blanc pur pour détacher) */
+    --brown-dark: #4a3319;     /* Marron foncé (titres et navigation) */
+    --brown-light: #8b5a2b;    /* Marron chaud doré (accents et bordures) */
+    --text-muted: #6e5d4f;     /* Couleur des paragraphes */
+    --bw-border: #ebdccb;      /* Couleur fine de séparation beige */
+}
+
+/* --- CONFIGURATION GÉNÉRALE --- */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+h1, h3 {
+    color: var(--brown-dark);
+}
+h2 {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: var(--brown-dark);
+    text-align: center;
+    margin: 60px auto 40px auto;
+    width: 100%;
+    font-size: 1.8rem;
+}
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--brown-light);
+    margin: 12px auto 0 auto;
+}
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+#infos-generales {
+    padding-top: 140px; 
+}
+#infos-generales p {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+/* --- 📌 NAVIGATION BARRE FIXE --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(253, 250, 244, 0.96);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--bw-border);
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-logo img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.nav-logo span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--brown-dark);
+}
+nav a {
+    display: inline-block;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: var(--brown-light);
+}
+
+/* --- SYSTÈMES DE SCROLL HORIZONTAL --- */
+.avis-container, .tarifs-container, .galerie-container {
+    display: flex;
+    gap: 25px;
+    padding: 20px 20px 40px 20px; 
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+}
+
+@media screen and (min-width: 1200px) {
+    .avis-container, .tarifs-container, .galerie-container {
+        justify-content: safe center;
+    }
+}
+
+.avis-container::-webkit-scrollbar,
+.tarifs-container::-webkit-scrollbar,
+.galerie-container::-webkit-scrollbar {
+    height: 8px;
+}
+.avis-container::-webkit-scrollbar-track,
+.tarifs-container::-webkit-scrollbar-track,
+.galerie-container::-webkit-scrollbar-track {
+    background: #f1e7dc;
+    border-radius: 10px;
+}
+.avis-container::-webkit-scrollbar-thumb,
+.tarifs-container::-webkit-scrollbar-thumb,
+.galerie-container::-webkit-scrollbar-thumb {
+    background: var(--brown-light);
+    border-radius: 10px;
+}
+
+/* --- GRILLE --- */
+.side-by-side-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.grid-left, .grid-right {
+    flex: 1;
+    min-width: 300px;
+}
+.text-left-desktop {
+    text-align: left;
+}
+.text-left-desktop h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* --- AVANTAGES --- */
+.avantages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.avantage {
+    border-left: 4px solid var(--brown-light);
+    background: var(--bg-card);
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(74, 51, 25, 0.04);
+}
+
+/* --- CARTES PRODUITS --- */
+.carte {
+    background: var(--bg-card);
+    border: 1px solid var(--bw-border);
+    border-radius: 12px;
+    width: 250px;
+    padding: 35px;
+    text-align: center;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(74, 51, 25, 0.04);
+}
+.carte:hover {
+    border-color: var(--brown-light);
+    transform: translateY(-5px);
+}
+.carte span {
+    color: var(--brown-light);
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.carte h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+/* --- GALERIE --- */
+.galerie-container img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid var(--bw-border);
+    flex-shrink: 0;
+}
+.galerie-container img:hover {
+    border-color: var(--brown-light);
+}
+
+/* --- AVIS --- */
+.avis {
+    min-width: 320px;
+    max-width: 320px;
+    background: var(--bg-card);
+    border: 1px solid var(--bw-border);
+    border-radius: 12px;
+    padding: 25px;
+    flex-shrink: 0;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(74, 51, 25, 0.04);
+}
+.avis p {
+    font-style: italic;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.avis h4 {
+    color: var(--brown-dark);
+    margin: 0;
+    font-size: 16px;
+}
+.avis h5 {
+    color: #9c8a7b;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+/* --- BOUTONS --- */
+button, .bouton-itineraire {
+    background-color: var(--brown-dark);
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+button:hover, .bouton-itineraire:hover {
+    background-color: var(--brown-light);
+}
+
+/* --- MAPS --- */
+iframe {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    display: block;
+    border: 1px solid var(--bw-border);
+}
+.itineraires {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.adresse-texte, .transports-bloc {
+    background: var(--bg-card);
+    border: 1px solid var(--bw-border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(74, 51, 25, 0.04);
+}
+.transport-card {
+    border-bottom: 1px solid var(--bw-border);
+    padding: 10px 0;
+}
+.transport-card:last-child {
+    border: none;
+}
+
+/* --- APPEL BLOC --- */
+.bloc-appel-direct {
+    background: var(--bg-card);
+    padding: 40px 25px;
+    border-radius: 12px;
+    border: 1px solid var(--bw-border);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(74, 51, 25, 0.04);
+}
+.tel-numero {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--brown-dark);
+    margin: 20px 0;
+}
+.bouton-appel-gros {
+    background-color: var(--brown-light);
+    color: #ffffff;
+    padding: 18px 32px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+.bouton-appel-gros:hover {
+    background-color: var(--brown-dark);
+}
+
+/* --- HORAIRES SECTION --- */
+#horaires-bande {
+    background-color: #f5ede2;
+    color: var(--text-muted);
+    padding: 60px 20px 30px 20px;
+    margin-top: 80px;
+    border-top: 1px solid var(--bw-border);
+}
+#horaires-bande h2::after {
+    display: none;
+}
+.grille-horaires {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.colonne-jour {
+    background: var(--bg-card);
+    padding: 20px 10px;
+    border-radius: 8px;
+    border-top: 4px solid var(--brown-light);
+    flex: 1;
+    min-width: 95px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+.colonne-jour h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--brown-dark);
+}
+.credits-footer {
+    margin-top: 50px;
+    border-top: 1px solid var(--bw-border);
+    padding-top: 20px;
+}
+
+/* --- FLOTTEURS RETOUR & APPEL --- */
+.bouton-retour-haut {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--bg-card);
+    color: var(--brown-dark);
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000;
+    border: 1px solid var(--bw-border);
+}
+.bouton-appel-flottant {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: var(--brown-dark);
+    color: #ffffff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- SLIDER NAV --- */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.fleche-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-card);
+    border: 1px solid var(--bw-border);
+    color: var(--brown-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fleche-nav.gauche { left: -10px; }
+.fleche-nav.droite { right: -10px; }
+
+@media screen and (min-width: 769px) {
+    .fleche-nav { display: none !important; }
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media screen and (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 10px; }
+    #infos-generales { padding-top: 180px; }
+    .bouton-appel-flottant { display: flex; }
+    .avis-container, .tarifs-container, .galerie-container { justify-content: flex-start; scroll-snap-type: x mandatory; }
+    .avis, .tarifs-container .carte, .galerie-container img { flex: 0 0 85%; max-width: 85%; min-width: 85%; scroll-snap-align: start; }
+    .side-by-side-grid { flex-direction: column; gap: 35px; }
+    .text-left-desktop, .adresse-texte, .transports-bloc, .widget-affluence { text-align: center !important; }
+}
+
+/* --- 📊 STATUS WIDGET --- */
+.widget-affluence {
+    background: var(--bg-card);
+    border: 1px solid var(--bw-border);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.affluence-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+.badge-affluence {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.status-vert { background-color: #e6f4ea; color: #137333; }
+.status-rouge { background-color: #fce8e6; color: #c5221f; }
+.status-gris { background-color: #f1f3f4; color: #5f6368; }

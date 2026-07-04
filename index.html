@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Le Moulin à Pain | Artisan Boulanger & Pâtissier La Courneuve (93)</title>
+    <meta name="description" content="Boulangerie artisanale Le Moulin à Pain au Blanc-Mesnil (93150). Pains traditionnels, viennoiseries maison et pâtisseries fines ouvertes 7j/7.">
+    <meta name="keywords" content="moulin a pain, boulangerie blanc-mesnil, artisan boulanger 93, pain tradition, viennoiseries maison, patisserie">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Le Moulin à Pain",
+      "image": "logo-boulangerie.png",
+      "telephone": "+33955954211",
+      "priceRange": "1€-15€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "La Courneuve",
+        "addressLocality": "La Courneuve",
+        "postalCode": "93120",
+        "addressCountry": "FR"
+      }
+    }
+    </script>
+    <link rel="icon" href="logo-boulangerie.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="logo-boulangerie.png" alt="Le Moulin à Pain Logo">
+            <span>LE MOULIN À PAIN</span>
+        </div>
+        <div class="nav-links">
+            <a href="#infos-generales">Accueil</a>
+            <a href="#prix">Nos Produits</a>
+            <a href="#galerie">Vitrine</a>
+            <a href="#avis-section">Avis</a>
+            <a href="#adresse">Nous trouver</a>
+            <a href="#contact-infos">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section id="infos-generales">
+        <h1 class="visually-hidden">Le Moulin à Pain - Boulangerie Artisanale à La Courneuve</h1>
+        
+        <div class="hero-logo-container">
+            <h2>🥖 LE MOULIN À PAIN 🥖</h2>
+        </div>
+        
+        <h2>« Le croissant digne d’un vrai ptit dej »</h2>
+        
+        <p class="lead-text">
+            Bienvenue dans votre boulangerie de quartier incontournable au Blanc-Mesnil. Chaque jour, notre équipe de passionnés vous propose des pains pétris et cuits sur place, des viennoiseries pur beurre croustillantes et des pâtisseries gourmandes. Une exigence de fraîcheur et de qualité au quotidien.
+        </p>
+        <a href="tel:09 55 95 42 11"><button style="margin-top: 15px; font-size: 1.2rem;">Appeler la boulangerie 📞</button></a>
+    </section>
+
+    <section id="pourquoi-nous">
+        <h2>Nos Engagements</h2>
+        <div class="avantages">
+            <div class="avantage">✓ 100% Artisanal (Pétri & cuit sur place)</div>
+            <div class="avantage">✓ Farines locales & certifiées</div>
+            <div class="avantage">✓ Cuissons régulières toute la journée</div>
+        </div>
+    </section>
+
+    <section id="prix">
+        <h2>Nos Incontournables</h2>
+        <div class="slider-wrapper">
+            <button class="fleche-nav gauche" onclick="document.getElementById('tarifs-list').scrollBy({left: -280, behavior: 'smooth'})">❮</button>
+            
+            <div class="tarifs-container" id="tarifs-list">
+                <div class="carte">
+                    <h3>Baguette Tradition</h3>
+                    <span>1.20€</span>
+                </div>
+                 <div class="carte">
+                    <h3>Croissant au Beurre</h3>
+                    <span>1.20€</span>
+                </div>
+                <div class="carte">
+                    <h3>Pain au Chocolat</h3>
+                    <span>1.20€</span>
+                </div>
+                <div class="carte">
+                    <h3>Éclair Chocolat/Café</h3>
+                    <span>3.50€</span>
+                </div>
+            </div>
+
+            <button class="fleche-nav droite" onclick="document.getElementById('tarifs-list').scrollBy({left: 280, behavior: 'smooth'})">❯</button>
+        </div>
+        <p style="margin-top: 25px; font-size: 0.95rem; color: var(--bw-silver);">💳 Modes de paiement acceptés : Espèces et Carte Bancaire (Dès 1€)</p>
+    </section>
+
+    <section id="galerie">
+        <h2>Nos Réalisations</h2>
+        <div class="galerie-container">
+            <img src="Fraisier.jpg" alt="Pains croustillants">
+            <img src="Tarte Fruits Mixx.jpg" alt="Viennoiseries dorées">
+            <img src="Tartes citron meringuées.jpg" alt="Pâtisseries fines">
+            <img src="Gâteau Fraise Framboise.jpg" alt="Espace sandwichs">
+        </div>
+    </section>
+
+    <section id="stats">
+        <h2>La boulangerie en chiffres</h2>
+        <div class="tarifs-container">
+            <div class="carte">
+                <h3>7j/7</h3>
+                <p>Votre pain chaud même le dimanche</p>
+            </div>
+            <div class="carte">
+                <h3>600+</h3>
+                <p>Traditions cuites par jour</p>
+            </div>
+            <div class="carte">
+                <h3>4.2★</h3>
+                <p>Note moyenne des clients (29 avis)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="avis-section">
+        <h2>Avis de nos gourmands</h2>
+        <div class="avis-container" id="avis-list">
+            <div class="avis">
+                <p>"De passage , nous avons acheté une galette des rois Vraiment excellente"</p>
+                <div>
+                    <h4>Saliha Bazizi ⭐⭐⭐⭐⭐</h4>
+                    <h5>Avis Google</h5>
+                </div>
+            </div>
+
+            <div class="avis">
+                <p>"Une boulangerie au top ! Le pain est toujours frais et croustillant, les viennoiseries sont délicieuses (mention spéciale pour le croissant au beurre) ! Une vraie pépite du quartier !"</p>
+                <div>
+                    <h4>Yowan Caussy ⭐⭐⭐⭐⭐</h4>
+                    <h5>Avis Google</h5>
+                </div>
+            </div>
+
+            <div class="avis">
+                <p>"Accueil chaleureux
+                La nourriture est good
+                Je recommande"</p>
+                <div>
+                    <h4>Rakul lyngarathasan ⭐⭐⭐⭐⭐</h4>
+                    <h5>Avis Google</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="adresse">
+        <h2>Nous trouver & Accès</h2>
+        <div class="side-by-side-grid">
+            <div class="grid-left">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5243.360555815345!2d2.40353638958144!3d48.92148341838709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66dc3880b4617%3A0xeda04e928791563b!2sLE%20MOULIN%20%C3%80%20PAIN!5e0!3m2!1sfr!2sfr!4v1783157409473!5m2!1sfr!2sfr" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin">
+
+                </iframe>
+                <div class="itineraires">
+                    <a href="https://maps.app.goo.gl/GNsvEhAK4jWhHHSH9" target="_blank" class="bouton-itineraire">📍 Google Maps</a>
+                    <a href="https://ul.waze.com/ul?place=ChIJVVXFIG9s5kcRuZJAXUoSld8&ll=48.92148340%2C2.40353640&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" class="bouton-itineraire">🚗 Waze</a>
+                </div>
+            </div>
+
+            <div class="grid-right text-left-desktop">
+                <div class="adresse-texte">
+                    <h3><i class="fa-solid fa-map-location-dot"></i> Adresse de la boutique</h3>
+                    <p>
+                        65 Rue Anatole France,<br>
+                        93120 La Courneuve
+                    </p>
+                </div>
+
+                <div class="transports-bloc">
+                    <h3><i class="fa-solid fa-bus"></i> Venir en bus</h3>
+                    <div class="transports-container">
+                        <div class="transport-card"><p><strong>🚏 Jean Jaurès - Division Leclerc</strong> (Ligne 152) - 8 min à pied</p>
+                        <p><strong>🚏 La Courneuve - 8 Mai 1945</strong> (Ligne 607 et 609) - 10 min à pied</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-infos">
+        <h2>Contact & Horaires de Pointe</h2>
+        <div class="side-by-side-grid">
+            <div class="grid-left text-left-desktop">
+                <h3>Une commande pour un événement ?</h3>
+                <p>Pour vos gâteaux d'anniversaire, grands repas ou buffets, pensez à réserver vos produits <strong>48h à l'avance</strong> directement par téléphone ou en boutique.</p>
+                
+                <div class="widget-affluence">
+                    <div class="affluence-header">
+                        <span class="affluence-titre">📊 Affluence en magasin :</span>
+                        <span id="affluence-badge" class="badge-loading">Calcul...</span>
+                    </div>
+                    <p id="affluence-text" class="affluence-desc">Analyse de la file d'attente en cours...</p>
+                </div>
+            </div>
+
+            <div class="grid-right">
+                <div class="bloc-appel-direct">
+                    <h3><i class="fa-solid fa-phone-volume"></i> Ligne Directe</h3>
+                    <p class="tel-numero">09 55 95 42 11</p>
+                    <a href="tel:09 55 95 42 11" class="bouton-appel-gros">Appeler la boulangerie 📞</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section id="horaires-bande">
+    <h2>Horaires d'ouverture</h2>
+    <div class="grille-horaires">
+        <div class="colonne-jour"><h3>Lun</h3><p>07:00</p><p>20:30</p></div>
+        <div class="colonne-jour"><h3>Mar</h3><p>07:00</p><p>20:30</p></div>
+        <div class="colonne-jour"><h3>Mer</h3><p>07:00</p><p>20:30</p></div>
+        <div class="colonne-jour"><h3>Jeu</h3><p>07:00</p><p>20:30</p></div>
+        <div class="colonne-jour"><h3>Ven</h3><p>07:00</p><p>20:30</p></div>
+        <div class="colonne-jour"><h3>Sam</h3><p>07:00</p><p>20:30</p></div>
+        <div class="colonne-jour"><h3>Dim</h3><p>07:00</p><p>20:30</p></div>
+    </div>
+
+    <div class="credits-footer">
+        <p style="font-size: 0.85rem; color: #8a7a68; margin-bottom: 5px;">
+            © 2026 Le Moulin à Pain La Courneuve. Tous droits réservés.
+        </p>
+        <p style="font-size: 0.9rem; color: #8a7a68;">
+            <a href="#mentions-legales" style="color: #8a7a68; text-decoration: none; margin-right: 15px;">Mentions Légales</a> | 
+            <span style="color: #4a3319; font-weight: normal; margin-left: 15px;">Site réalisé par <strong>Ezio Chaix</strong></span>
+        </p>
+    </div>
+</section>
+
+<a href="tel:09 55 95 42 11" class="bouton-appel-flottant" title="Appeler">📞</a>
+<a href="#" class="bouton-retour-haut">↑</a>
+
+<script>
+// --- LOGIQUE D'AFFLUENCE BOULANGERIE ---
+function calculerAffluence() {
+    const maintenant = new Date();
+    const heure = maintenant.getHours();
+    
+    const badge = document.getElementById('affluence-badge');
+    const texte = document.getElementById('affluence-text');
+    
+    if(!badge || !texte) return;
+
+    if (heure >= 7 && heure < 21) {
+        if ((heure >= 7 && heure < 9) || (heure >= 11 && heure < 13) || (heure >= 16 && heure < 19)) { 
+            badge.className = "badge-affluence status-rouge";
+            badge.innerText = "🔥 Heure de pointe";
+            texte.innerText = "Fournée de pain frais et forte affluence (repas / sortie d'école). Notre équipe vous sert le plus vite possible !";
+        } else {
+            badge.className = "badge-affluence status-vert";
+            badge.innerText = "🟢 Fluide";
+            texte.innerText = "Moment idéal pour choisir vos pâtisseries calmement et discuter avec votre boulanger.";
+        }
+    } else {
+        badge.className = "badge-affluence status-gris";
+        badge.innerText = "💤 Fermé";
+        texte.innerText = "La boulangerie est actuellement fermée. Les fourneaux s'allument dès 6h demain matin !";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', calculerAffluence);
+</script>
+
+</body>
+</html>
